@@ -41,6 +41,7 @@ main section.left-section.flex button.active {
 
 main section.right-section.flex {
   
+
   gap: 16px;
   row-gap: 2rem;
   justify-content: center;

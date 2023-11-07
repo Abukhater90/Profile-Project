@@ -119,6 +119,8 @@ header .fixed {
 }
 
 
+
+
 @keyframes mymove {
   0%   {scale: 0;}
   60%  {scale: 1.2;}
@@ -141,6 +143,9 @@ header .fixed ul.modal li {
   padding-bottom: 0.77rem;
   padding-top: 0.5rem;
 }
+
+
+
 
 header .fixed ul.modal li:first-child {
   text-align: right;

@@ -1,6 +1,13 @@
 import "./Contact.css";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("mrgwdoae");
+
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+}
+
   return (
     <section className="contact-us">
       <h1 className="title">
@@ -11,29 +18,36 @@ const Contact = () => {
       <p className="sub-title">Contact Us for More Information</p>
 
       <div className="flex">
-      <form className="" >
+        <form onSubmit={handleSubmit} className="">
+          <div className="flex">
+            <label htmlFor="email">Email Address</label>
+            <input required type="email" id="email" name="email"/>
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
+          </div>
 
-        <div className="flex"> 
-        <label htmlFor="email">Email Address</label>
-        <input required type="email" id="email" />
+          <div className="flex" style={{ marginTop: "24px" }}>
+            <label htmlFor="Message">Your Message</label>
+            <textarea required name="message" id="Message" ></textarea>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+          </div>
+
+          <button className="submit" disabled={state.submitting}>
+            {" "}
+            Submit
+          </button>
+        </form>
+        <div className=" animation">
+          
         </div>
-      
-        <div className="flex" style={{marginTop: 
-        "24px"}}>
-        <label htmlFor="Message" >Your Message</label>
-        <textarea required name="" id="Message" >
-        </textarea>
-        </div>
-        
-
-        <button className="submit">Submit</button>
-
-      </form>
-      <div className="border animation"></div>
       </div>
-
-
-
     </section>
   );
 };
