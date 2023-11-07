@@ -2,6 +2,28 @@
 import "./Main.css";
 
 const Main = () => {
+  // Array of image URLs
+  const imageUrls = [
+    "https://colorlib.com/wp/wp-content/uploads/sites/2/brooke-simple-website-template.jpg.webp",
+
+    "https://colorlib.com/wp/wp-content/uploads/sites/2/julian-simple-website-template.jpg.webp",
+
+    "https://colorlib.com/wp/wp-content/uploads/sites/2/dovile-simple-website-template.jpg.webp",
+
+    "https://colorlib.com/wp/wp-content/uploads/sites/2/resume-website-template.jpg.webp",
+
+    "https://colorlib.com/wp/wp-content/uploads/sites/2/jevelin-online-resume-template.jpg.webp",
+
+    "https://colorlib.com/wp/wp-content/uploads/sites/2/cvio-resume-website-template.jpg.webp" ,
+
+    "https://colorlib.com/wp/wp-content/uploads/sites/2/arter-resume-template.jpg.webp",
+
+    "https://colorlib.com/wp/wp-content/uploads/sites/2/teoro-resume-template.jpg.webp",
+    
+    "https://colorlib.com/wp/wp-content/uploads/sites/2/leven-resume-website-template.jpg.webp"
+
+  ];
+
   return (
     <main className="flex">
       <section className="flex left-section">
@@ -13,10 +35,10 @@ const Main = () => {
       </section>
 
       <section className="flex right-section">
-        {["aa", "bb", "cc", 1, 2 , 3].map((item, index) => {
+        {imageUrls.map((imageUrl, index) => {
           return (
             <article key={index} className="card">
-              <img width={266} src="https://www.sliderrevolution.com/wp-content/uploads/2021/10/cofe-header.png" alt={`Project ${index}`} />
+              <img width={266} src={imageUrl} alt={`Project ${index}`} />
               <div style={{ width: "266px" }} className="box">
                 <h1 className="title">Landing Page</h1>
                 <p className="sub-title">

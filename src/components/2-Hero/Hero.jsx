@@ -1,5 +1,4 @@
-import "./Hero.css";
-
+import "./Hero.css"
 const Hero = () => {
   return (
     <>
