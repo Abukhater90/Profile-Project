@@ -16,13 +16,21 @@ const Hero = () => {
             I&apos;m Ali Abu Khater , I'm  a passionate full-stack developer with a knack for crafting innovative digital solutions. With a blend of front-end and back-end expertise, I thrive on bringing ideas to life through clean, efficient code and intuitive user interfaces
           </p>
 
+
+
           <div className="all-icons flex">
             <div className="icon icon-mail4"></div>
             <div className="icon icon-instagram"></div>
-            <div className="icon icon-github"></div>
+            
+            <a href="https://github.com/Abukhater90" className="icon icon-github" target="blank" style={{color:"rgba(161 161 170)"}}></a>
+              
+        
             <div className="icon icon-linkedin"></div>
           </div>
         </div>
+
+
+        
 
         <div className="right-section animation ">
         
